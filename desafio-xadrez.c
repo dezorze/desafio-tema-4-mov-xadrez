@@ -1,5 +1,32 @@
 # include <stdio.h>
 
+// Usando recursividade:
+void torre(int num) {
+    if(num > 0) {
+        printf("\n## Torre: Movimento com recursividade\n");
+        printf("Direita\n", num);
+        torre(num - 1);
+    }
+}
+
+void bispo(int num) {
+    if(num > 0) {
+        printf("\n## Bispo: Movimento com recursividade\n");
+        printf("Cima\n");
+        printf("Direita\n");
+        bispo(num - 1);
+    }
+}
+
+void rainha(int num) {
+    if(num > 0) {
+        printf("\n## Rainha: Movimento com recursividade\n");
+        printf("Esquerda\n");
+        rainha(num - 1);
+    }
+}
+
+
 int main() {
     //nesse codigo, um for dentro de um while reproduz o mov do cavalo
     int movimento = 1;
@@ -30,6 +57,14 @@ int main() {
         printf("Esquerda\n");
 
     }
+
+    //Usando recursividade para simular o movimento das pecas:
+    int n = 5;
+    torre(n);
+    bispo(n);
+    rainha(n);
+
+
 
     return 0;
 }
